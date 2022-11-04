@@ -135,10 +135,10 @@ main {
 /* slide content */
 .slide-content {
   position: relative;
-  width: 100%;
+  max-width: 700px;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   padding: 0 1rem;

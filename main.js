@@ -9,7 +9,7 @@ document.querySelector('#app').innerHTML = `
         </span>
         <nav>
           <a href="loic.html">Loic</a>
-          <a href="about.html">About</a>
+          <a href="#about">About</a>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -58,7 +58,7 @@ document.querySelector('#app').innerHTML = `
           <span class="dot"></span>
         </div>
       </div>
-      <div class="about">
+      <div class="about" id="about">
         <div class="about-content">
           <h2>About</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>

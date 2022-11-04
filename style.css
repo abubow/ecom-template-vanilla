@@ -331,21 +331,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 50px;
+  flex-direction: row;
+  padding: 6rem;
   text-align: center;
   background: #242424;
   color: #fff;
-  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 .about h2 {
   font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .about p {
   font-size: 1.5rem;
+  font-weight: 100;
   margin-top: 20px;
+  text-align: justify;
+  padding: 0 4rem;
+  opacity: 0.8;
 }
 
 .about a {
@@ -484,4 +492,112 @@ body {
   .service-icon p {
     font-size: 0.8rem;
   }
+}
+
+.work {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  background: #242424;
+  min-height: 100vh;
+  color: #fff;
+  width: 100%;
+}
+
+.work h2 {
+  font-size: 4rem;
+}
+
+.work-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.work-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.work-item img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.work-item img:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  filter:opacity(0.5);
+  filter: blur(2px);
+}
+
+.work-content {
+  min-height: 300px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.work-item:hover .work-content {
+  opacity: 1;
+}
+
+.work-content h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.work-content p {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .work {
+    padding: 20px;
+  }
+  .work h2 {
+    font-size: 2rem;
+  }
+  .work-item img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  background: #fff;
+  color: #242424;
+  width: 100%;
 }

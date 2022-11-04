@@ -96,10 +96,10 @@ document.querySelector('#app').innerHTML = `
           <div class="work-item">
             <div class="work-image">
               <img src="https://source.unsplash.com/800x600/?nature,water" alt="">
-            </div>
             <div class="work-content">
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            </div>
             </div>
           </div>
           <div class="work-item">
@@ -121,6 +121,21 @@ document.querySelector('#app').innerHTML = `
             </div>
           </div>
         </div>
+        <a href="#" class="btn">View More</a>
+        <footer>
+          <div class="footer-content">
+            <h3>Newsletter</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <form action="">
+              <input type="email" placeholder="Enter Email">
+              <input type="submit" value="Subscribe">
+            </form>
+                      </div>
+          <div class="footer-bottom">
+            Designed by <a href="https://abubow.me">Abuzar Sherazi</a>
+          </div>
+        </footer>
+      </div>
       </div>
       </div>
       </div>

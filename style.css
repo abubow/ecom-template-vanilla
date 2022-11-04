@@ -1,0 +1,487 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3rem;
+  background-color: #242424;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.logo:hover {
+  color: rgba(255, 255, 255, 0.87);
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.87);
+}
+nav{
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 1rem;
+}
+nav a:first-child {
+  margin-left: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* slider that contains all slides */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* each individual slide that will be animated */ 
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide:nth-child(1) {
+  background-color: #f50057;
+}
+.slide:nth-child(2) {
+  background-color: #3f51b5;
+}
+.slide:nth-child(3) {
+  background-color: #ff9800;
+}
+
+/* slide content */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+  color: #000;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* slide content title */
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* slide content description */
+.slide-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  text-align: justify;
+}
+
+/* slide content button */
+.slide-content a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #242424;
+  color: #fff;
+}
+
+.slide-content a:hover {
+  background-color: #fff;
+  color: #242424;
+}
+
+/* slider next button */
+.slider-button .next {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-button .next:hover {
+  background-color: #fff;
+  color: #242424;
+}
+
+/* slider previous button */
+.slider-button .prev {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-button .prev:hover {
+  background-color: #fff;
+  color: #242424;
+}
+
+/* slider buttons container */
+.slider-buttons {
+  position: absolute;
+  bottom: 50%;
+  left: 1rem;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 90%;
+}
+
+/* slider dots container */
+.dots-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+/* slider dot */
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dot:hover {
+  background-color: #242424;
+}
+
+/* slider dot active */
+.dot.active {
+  background-color: #242424;
+}
+
+/* slider dot active */
+.dot.active:hover {
+  background-color: #fff;
+}
+
+/* slide image */
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-container {
+    width: 90%;
+    height: 90%;
+  }
+  .slider {
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-content {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-content h2 {
+    font-size: 3.5rem;
+  }
+  .slide-content p {
+    font-size: 1.4rem;
+  }
+  .slide-content a {
+    font-size: 1.4rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-container {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .slider-container {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .slider-container {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #f1f1f1;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  background: #242424;
+  color: #fff;
+  width: 100%;
+}
+
+.about h2 {
+  font-size: 4rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.about a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.about a:hover {
+  background: #fff;
+  color: #242424;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 20px;
+  }
+  .about h2 {
+    font-size: 2rem;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 20px;
+  }
+  .about h2 {
+    font-size: 1.5rem;
+  }
+  .about p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about {
+    padding: 20px;
+  }
+  .about h2 {
+    font-size: 1rem;
+  }
+  .about p {
+    font-size: 0.6rem;
+  }
+}
+
+.services {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  background: #fff;
+  color: #242424;
+  width: 100%;
+}
+
+.services h2 {
+  font-size: 4rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.service-icon {
+  font-size: 1rem;
+  margin-right: 20px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  background: #242424;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.service-icon:hover {
+  background: #fff;
+  color: #242424;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.service-icon h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.service-icon p {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 20px;
+  }
+  .services h2 {
+    font-size: 2rem;
+  }
+  .service-icon {
+    width: 200px;
+    height: 200px;
+  }
+  .service-icon h3 {
+    font-size: 1rem;
+  }
+  .service-icon p {
+    font-size: 0.8rem;
+  }
+}
